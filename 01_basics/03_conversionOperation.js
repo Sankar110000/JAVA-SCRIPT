@@ -26,8 +26,26 @@ let booleanIsLoggedin = Boolean(isLoggedin);
 let someNumber = 123
 let stringNumber = String(someNumber);
 
-console.log(stringNumber);
+// console.log(stringNumber);
 
 
-console.log(typeof stringNumber);
+// console.log(typeof stringNumber);
 
+// console.log("1" + 2);
+// console.log("1" + "2");
+// console.log(1 + "2");
+// console.log(1 + 2 + "3");
+// console.log( "1" + 2 + 3); 
+
+
+// console.log(+true);
+// console.log(true+);
+// console.log(+"");
+
+
+let num1, num2, num3
+num1 = num2 = num3 = 2+5
+
+let gameCounter = 1000;
+// console.log(gameCounter++); => postfix
+// console.log(++gameCounter); => prefix
