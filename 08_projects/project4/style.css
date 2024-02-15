@@ -1,0 +1,13 @@
+body{
+    height: 100vh;
+    background-color: #212121;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    text-align: center;
+}
