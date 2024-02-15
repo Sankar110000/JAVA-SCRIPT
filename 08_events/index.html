@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: antiquewhite;
+        }
+        a{
+            color: white
+        }
+        .image{
+            height: 100px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        #img1{
+            background-color: #fff;
+        }
+        #img2{
+            background-color: #ff0000;
+        }
+        #img3{
+            background-color: #00ff44;
+        }
+        #img4{
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <ul id="images">
+        <li id="img1" class="image" title="first" style="color: black; text-align: center;">image 1</li>
+        <li id="img2" class="image" style="color: black; text-align: center;">image 2</li>
+        <li id="img3" class="image" style="color: black; text-align: center;">image 3</li>
+        <li id="img4" class="image" style="color: black; text-align: center;">image 4</li>
+        <li><a href="https://www.google.com/">This is a link</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('img3').onclick = function (e){
+    //     console.log(e);
+    //     }
+    
+    // Imp objects
+    // type, timeStamp, preventDefault, 
+    // target, toElement, sourcElelement
+    // altKey, ctrlKey, shiftKey, keyCode
+
+    // document.getElementById('images').addEventListener('click', (e) => {
+    //     console.log('clicked inside the ul');
+    // }, false)
+
+    // document.getElementById('img3').addEventListener('click', (e) => {
+    //     console.log('image3 clicked');
+    //     e.stopPropagation();
+    // }, false)
+    
+    document.querySelector('a').addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('google clicked');
+    }, false)
+
+    document.querySelector('#images').addEventListener('click',(e) => {
+
+        let targetElement = e.target;
+        targetElement.remove();
+    }, false)
+
+</script>
+</html>
